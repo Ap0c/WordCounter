@@ -1,4 +1,6 @@
-#Uses the split function on each line in text file, this produces a list of words in that line. It then takes the length of the list to get the word count for that line. This is added to total word count for each line processed.
+"""Uses the split function on each line in text file, this produces a list
+of words in that line. It then takes the length of the list to get the word
+count for that line. This is added to total word count for each line processed."""
 
 #Tally of words in file.
 totalwords = 0
