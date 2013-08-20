@@ -12,12 +12,13 @@ root.wm_title("Word Counter") #Sets window title.
 #root.geometry("300x300") #Sets window size.
 root.wm_resizable(0,0) #Prevents resizing of window.
 
-instructions = Label(root, text = "Please provide the file path below, then hit enter to get the word count.", padx = 10, pady = 5)
-instructions.pack()
+#Instructions on use.
+instructions = Label(root, text = "Please provide the file path below, then press \nthe button or hit enter to get the word count.", padx = 10, pady = 5)
+instructions.grid(row = 0)
 
 #Creates a text entry box for the file path.
-filepath = Entry(root, width=40)
-filepath.pack()
+filepath = Entry(root, width = 40)
+filepath.grid(row = 1, pady = 10, padx = 20)
 
 #Performs the counting of text in the file.
 def count(event):
@@ -29,6 +30,9 @@ def count(event):
 
 	tkMessageBox.showinfo("Word Count", "Word Count: %s" % totalwords) #Produces message box with word count.
 
-filepath.bind("<Return>", count)
+filepath.bind("<Return>", count) #Activates word count on enter key press.
+
+countbutton = Button(root, text = "Count", command = lambda:count(0))
+countbutton.grid(row = 2, pady = 15)
 
 root.mainloop()
