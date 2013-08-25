@@ -1,6 +1,8 @@
 WordCounter
 ===========
 
-GUI python program that takes in a text file and returns a word count.
+Python program for performing a word count, either on a plain text (.txt) file, or a string of text inputted directly into the program itself.
 
-Currently only tested with plain text (.txt) files.
+Makes use of the Tkinter package for the GUI.
+
+Any suggestions for improvement welcome.
